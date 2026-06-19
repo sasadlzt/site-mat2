@@ -132,4 +132,34 @@ border-radius: 0 5px 5px 5px;
   height: 100vh;
   background: rgba(0,0,0,0.7);
   display: flex;
-  
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Quando o link do popup é ativado (:target) */
+.fundo-popup: target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.janela-popup {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
+
+.botao-fechar {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
