@@ -1,1 +1,135 @@
+/* Configurações Gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color:#f0f2f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
 
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 1. ESTILO DO BANNER */
+.banner {
+  background-image: linear-gradient(135deg, #0076a3 0%, #1abc9c 100%);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+.botao-banner {
+  display: inline-block;
+  background-color: #e74c3c;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.botao-banner:hover {
+  background-color: #c0392b;
+  transform: scale (1.05);
+}
+
+/* Animação do Banner */
+@keyframes flutuar {
+  0%, 100% {transform: translateY(0); }
+  50% {transform: translate (-8px); }
+}
+
+/* 2. GRADE DE BOTÕES */
+.grade-botoes {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.botao-menu {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: filter 0.2s, transform 0.1s;
+}
+
+.botao-menu:hover {
+  filter: brightness (0.9);
+  transform: translateY (-2px);
+}
+
+/* Cores dos botoes */
+.azul {background-color: #3498db; }
+.verde {background-color: #2ecc71; }
+.roxo {background-color: #9b59b6; }
+
+/* 3. SISTEMA DE ABAS (CSS Puro) */
+.abas-sistema {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.abas-sistema input[type="radio"] {
+  display: none; /* Esconde as bolinhas do radio */
+}
+
+.abas-sistema label {
+  padding: 10px 20px;
+  background: #e0e0e0;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  margin-right: 4px;
+}
+
+.aba-conteudo {
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  order: 1;
+  display: none; /* Esconde o conteúdo por padrão */
+border-radius: 0 5px 5px 5px;
+}
+
+/* Mostra o conteúdo da aba selecionada */
+.abas-sistema input[type="radio"]: checked + label {
+  background: #0076a3;
+  color: white;
+}
+
+.abas-sistema input[type="radio"]: checked + label + .aba-conteudo {
+  display.block;
+}
+
+/* 4. POP-UP (CSS Puro) */
+.fundo-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  
